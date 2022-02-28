@@ -1,0 +1,34 @@
+builtin function in 
+- array
+- string
+- number
+string
+- concat
+- includes
+- literal
+- split
+- slice
+
+array
+- concat
+- slice
+- splice
+- reverse
+- join
+- includes
+- forEach
+- map
+- find
+- filter
+
+number
+- parseInt
+- math round
+- math floor
+- math random
+
+object
+- bahas di oop
+
+boolean
+- 
