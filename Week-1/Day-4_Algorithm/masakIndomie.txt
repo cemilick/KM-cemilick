@@ -1,0 +1,18 @@
+- ambil uang di dompet
+- pergi ke warung
+- beli indomie
+- pulang ke rumah
+- ambil panci
+- isi air
+- taruh di kompor
+- nyalain kompor
+- buka indomie
+- ambil bumbu bumbunya
+- buka bumbu bumbunya
+- taruh bumbu di piring
+- jika air sudah mendidih, masukkan indomie ke panci
+- tunggu hingga matang
+- jika sudah matang, tiriskan
+- taruh indomie ke dalam piring berisi bumbu
+- campur bumbu dan indomie
+- indomie siap dinikmati
