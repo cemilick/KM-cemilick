@@ -1,0 +1,13 @@
+- git init
+- git status
+- git add "folder atau file"
+- git add .
+- git commit -m "message"
+- git remote add origin "url"
+- git remote -v
+- git set-url "url"
+- git branch
+- git branch namabranch
+- git checkout namabranch
+- git branch -D namabranch
+
