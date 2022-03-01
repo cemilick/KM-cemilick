@@ -1,0 +1,48 @@
+/* selector */
+/* - tag html */
+/* akan menghighlight semua tag yang ada */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+p {
+    color: lightcoral;
+    word-spacing: 2px;
+}
+
+/* - class name */
+.warna_merah{
+    color: red;
+}
+
+/* - id name */
+#unordered{
+    list-style: circle;
+}
+
+/* sizing */
+/* px, em, rem */
+/* bordered dan overflow */
+.kotak_biru{
+    width: 200px;
+    height: 200px;
+    border: 1px dashed black;
+    margin: 20px;
+    padding: 20px;
+    overflow: auto;
+}
+.kotak_hijau{
+    width: 200px;
+    height: 200px;
+    background: lightgreen;
+}
+
+/* Layouting */
+/* float */
+
+/* grid */
+
+/* flexbox */

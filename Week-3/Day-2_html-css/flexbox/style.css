@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    background-color: coral;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+}
+
+.navbar>.menu>a{
+    text-decoration: none;
+    background-color: red;
+    width: 100px;
+    margin-left: 10px;
+    color: black;
+}
+
+.content{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.content > *{
+    margin: 10px;
+}
+
+h2{
+    margin-bottom: 10px;
+}
+
+.footer{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    background-color: darkred;
+    align-items: center;
+    color: aliceblue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
