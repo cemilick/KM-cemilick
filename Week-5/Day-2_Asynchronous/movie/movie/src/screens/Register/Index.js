@@ -4,6 +4,7 @@ import { Button, Input } from 'react-native-elements';
 import axios from 'axios';
 import MyModal from '../../components/Modal';
 import { ScrollView } from 'react-native-gesture-handler';
+import { fakeAPIBaseURL } from '../../helpers/apiAccessToken';
 
 
 export default function Index(props) {
@@ -19,12 +20,26 @@ export default function Index(props) {
   const createUser = async () => {
     try {
       const body = {
-        name: username,
-        job: email,
+        email:email,
+        username:username,
+        password:password,
+        name:{
+            firstname:firstName,
+            lastname:lastName
+        },
+        address:{
+            city:'kilcoole',
+            street:'7835 new road',
+            number:3,
+            zipcode:'12926-3874',
+            geolocation:{
+                lat:'-37.3159',
+                long:'81.1496'
+            }
+        },
+        phone:'1-570-236-7033'
       };
-      const res = await axios.post(`https://reqres.in/api/users`, body, {
-        validateStatus: status => status < 501,
-      });
+      const res = await axios.post(`${fakeAPIBaseURL}/users`, body);
       console.log(res)
       setModalVisible(true)
     } catch (error) {
@@ -45,28 +60,30 @@ export default function Index(props) {
             placeholder='Email' 
             onChangeText={(text) => setEmail(text) }
             placeholderTextColor='lightgray'
-            inputStyle={{backgroundColor: 'white', borderRadius: 10}}/>
+            inputStyle={{backgroundColor: 'white', borderRadius: 5}}
+            
+            />
           <Input 
             placeholder='Username' 
             onChangeText={(text) => setUsername(text) }
             placeholderTextColor='lightgray'
-            inputStyle={{backgroundColor: 'white', borderRadius: 10}}/>
+            inputStyle={{backgroundColor: 'white', borderRadius: 5}}/>
           <Input 
             placeholder='Password' 
             secureTextEntry={true} 
             onChangeText={(text) => setPassword(text)}
             placeholderTextColor='lightgray'
-            inputStyle={{backgroundColor: 'white', borderRadius: 10}} />
+            inputStyle={{backgroundColor: 'white', borderRadius: 5}} />
           <Input 
             placeholder='First Name' 
             onChangeText={(text) => setFirstName(text) }
             placeholderTextColor='lightgray'
-            inputStyle={{backgroundColor: 'white', borderRadius: 10}} />
+            inputStyle={{backgroundColor: 'white', borderRadius: 5}} />
           <Input 
             placeholder='Last Name' 
             onChangeText={(text) => setLastName(text) }
             placeholderTextColor='lightgray'
-            inputStyle={{backgroundColor: 'white', borderRadius: 10}} />
+            inputStyle={{backgroundColor: 'white', borderRadius: 5}} />
           <Button 
             title={'Register Now!'} 
             buttonStyle={{

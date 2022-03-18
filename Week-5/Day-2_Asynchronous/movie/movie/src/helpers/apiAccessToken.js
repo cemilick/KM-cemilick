@@ -3,3 +3,5 @@ export const ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMDBkNjFlMjAxMTI0Nj
 export const baseUrl = 'https://api.themoviedb.org/3';
 
 export const imageUrl = 'https://image.tmdb.org/t/p/original';
+
+export const fakeAPIBaseURL = 'https://fakestoreapi.com';

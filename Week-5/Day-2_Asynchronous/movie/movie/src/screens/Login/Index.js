@@ -4,26 +4,25 @@ import { Button, Input } from 'react-native-elements';
 import axios from 'axios';
 import MyModal from '../../components/Modal';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { fakeAPIBaseURL } from '../../helpers/apiAccessToken';
 
 
 export default function Index(props) {
 
-  const [email, setEmail] = useState(['']);
+  const [username, setUsername] = useState(['']);
   const [password, setPassword] = useState('');
 
   const [modalVisible, setModalVisible] = useState(false)
 
   const createUser = async () => {
-    //   email:
-    //   eve.holt@reqres.in
-    //   password:
-    //   cityslicka
+    // username: "mor_2314",
+    // password: "83r5^_"
     try {
       const body = {
-        email: email,
+        username: username,
         password: password,
       };
-      const res = await axios.post(`https://reqres.in/api/login`,body).then(() => {
+      const res = await axios.post(`${fakeAPIBaseURL}/auth/login`,body).then(() => {
         console.log('res')
         setModalVisible(true)
       });
@@ -42,17 +41,17 @@ export default function Index(props) {
         </View>
         <View style={{width: 300, marginTop: 70, alignItems: 'center'}}>
             <Input 
-                placeholder='Email' 
-                onChangeText={(text) => setEmail(text) }
+                placeholder='Username' 
+                onChangeText={(text) => setUsername(text) }
                 placeholderTextColor='lightgray'
-                inputStyle={{backgroundColor: 'white', borderRadius: 10}}
+                inputStyle={{backgroundColor: 'white', borderRadius: 5}}
                  />
             <Input 
                 placeholder='Password' 
                 secureTextEntry={true} 
                 onChangeText={(text) => setPassword(text)} 
                 placeholderTextColor='lightgray'
-                inputStyle={{backgroundColor: 'white', borderRadius: 10}}/>
+                inputStyle={{backgroundColor: 'white', borderRadius: 5}}/>
             <Button 
             title={'Login Now!'} 
             buttonStyle={{
